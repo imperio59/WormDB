@@ -1,0 +1,50 @@
+{
+	"name" : "test_table",
+	"columns" : 
+	[
+		{
+			"name" : "customer_id",
+			"type" : "LONG",
+			"primary_key" : true
+		},
+		{
+			"name" : "first_name",
+			"type" : "STRING"
+		},
+		{
+			"name" : "last_name",
+			"type" : "STRING"
+		},
+		{
+			"name" : "membership_type",
+			"type" : "STRING"
+		},
+		{
+			"name" : "quantity",
+			"type" : "INTEGER"
+		},
+		{
+			"name" : "join_date",
+			"type" : "TIMESTAMP"
+		}
+	],
+	"indexes" :
+	[
+		{
+			"name" : "i_last_name_membership",
+			"column_names" :
+			[
+				"last_name",
+				"join_date"
+			]
+		},
+		{
+			"name" : "i_membership",
+			"type" : "BITMAP",
+			"column_names" :
+			[
+				"membership_type"
+			]
+		}
+	]
+}
