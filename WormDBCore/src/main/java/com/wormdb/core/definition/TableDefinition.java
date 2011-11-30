@@ -77,7 +77,6 @@ public final class TableDefinition implements ParsableObject
 		
 		//Can only have 1 PK
 		Validate.isTrue(numPrimaryKeysDefined == 1);
-		
 
 		for (ColumnDefinition def : getColumns())
 		{
